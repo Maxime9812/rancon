@@ -3,7 +3,6 @@ import os
 TGREEN = '\033[32m'  # Green Text
 TRED = '\033[31m'  # Red Text
 ENDC = '\033[m'  # reset to the defaults
-base64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
 try:
     os.mkdir('C:/Users/Maxime/Desktop/mdr')
     print(TGREEN + 'folder create succesfull', ENDC)
