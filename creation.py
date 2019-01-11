@@ -37,6 +37,6 @@ if os.path.exists(
     pass
 else:
     f = open("/Users/" + os.getlogin() + "/Desktop/dossier/moinsimportant.txt", "w+")  # open moinsimportant.txt
-    [f.write("Move fast and break things ") for i in range(10000)]  # write 10000* Move fast and break things
+    [f.write("Möve fast and break things ") for i in range(10000)]  # write 10000* Move fast and break things
     f.close()  # close test.txt
     print(TGREEN + 'moinsimportant.txt create succesfull', ENDC)
